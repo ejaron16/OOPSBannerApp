@@ -20,8 +20,8 @@ public class OOPSBannerApp {
             String.join(" ","**     **","**     **","*    *"," ** "),
             String.join(" ","**     **","**     **","****** ","  ***** "),
             String.join(" ","**     **","**     **","** ","           ** "),
-            String.join(" ","**     **","**     **","** ","         ** "),
-            String.join(" ","   *** ","     *** ","  ** ","        ***** ")
+            String.join(" ","**     **","**     **","** ","           ** "),
+            String.join(" ","   *** ","     *** ","  ** ","      ***** ")
         };
 
         // UC5: Using the Enhanced For Loop (for-each) for clean output

@@ -2,10 +2,8 @@
  * @author [E JARON]
  * @version 1.0 UC1-Print OOPS to Console
  */
-class PrintOOPS
-{
-    public static void main()
-    {
+public class OOPSBannerApp {
+    public static void main(String[] args) {
         System.out.println("OOPS");
     }
 }

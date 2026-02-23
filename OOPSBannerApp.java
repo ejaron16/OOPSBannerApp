@@ -2,7 +2,7 @@
  * @author [E JARON]
  * @version 1.0 UC3 - OOPS Banner Using String Join
  */
-public class OOPSSTRJoin {
+public class OOPSBannerApp {
 
     public static void main(String[] args) {
         // Now we just call the method instead of writing all the print lines here

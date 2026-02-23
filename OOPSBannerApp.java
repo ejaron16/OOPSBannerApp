@@ -1,27 +1,32 @@
 /**
  * @author [E JARON]
- * @version 1.0 UC4-OOPS Banner Printing with Array & Loops
+ * @version 1.0 UC5-Inline Array Initialization
  */
-public class OOPSBannerApp{
+public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        // Now we just call the method instead of writing all the print lines here
         displayOopsBanner();
     }
 
-    // This is the new function (method) we created to hold the banner logic
+    /**
+     * UC5: Uses Inline Initialization to create and populate the array 
+     * in one compact statement.
+     */
     public static void displayOopsBanner() {
-        String[] lines = new String[7];
-        lines[0] = String.join(" ","  ***   ","  ***  ","******","   ***** ");
-        lines[1] = String.join(" ","**    **","**   **","*    *"," **      ");
-        lines[2] = String.join(" ","**    **","**   **","*    *"," **      ");
-        lines[3] = String.join(" ","**    **","**   **","****** ","  *****  ");
-        lines[4] = String.join(" ","**    **","**   **","**    ","        ** ");
-        lines[5] = String.join(" ","**    **","**   **","**    "," **     ** ");
-        lines[6] = String.join(" ","  ***   ","  ***  ","**    ","   *****      ");
+        // Combining declaration, initialization, and String.join() calls
+        String[] lines = {
+            String.join(" ","   *** ","     *** ","  ******","   ***** "),
+            String.join(" ","**     **","**     **","*    *"," ** "),
+            String.join(" ","**     **","**     **","*    *"," ** "),
+            String.join(" ","**     **","**     **","****** ","  ***** "),
+            String.join(" ","**     **","**     **","** ","           ** "),
+            String.join(" ","**     **","**     **","** ","         ** "),
+            String.join(" ","   *** ","     *** ","  ** ","        ***** ")
+        };
 
-   for (String line : lines) {
-    System.out.println(line);
-   }
-}
+        // UC5: Using the Enhanced For Loop (for-each) for clean output
+        for (String line : lines) {
+            System.out.println(line);
+        }
+    }
 }

@@ -9,7 +9,6 @@ public class OOPSBannerApp {
             "**     **",
             "**     **",
             "**     **",
-            "**     **",
             "   ***   ",
         };
     }
@@ -19,14 +18,13 @@ public class OOPSBannerApp {
             "**     **",
             "**     **",
             "**     **",
-            "**     **",
             "   ***   ",
         };
     }
     public static String[] getPPattern(){
         return new String[]{
             "******",
-            "*     *",
+            "**    *",
             "*     * ",
             "****** ",
             "**      ",
@@ -37,8 +35,7 @@ public class OOPSBannerApp {
         return new String[]{
             "   ***** ",
             " **      ",
-            "   *****   ",
-            "        ** ",
+            "  *****   ",
             "       ** ",
             "  *****   ",
         };

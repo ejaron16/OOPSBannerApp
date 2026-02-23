@@ -16,13 +16,13 @@ public class OOPSBannerApp {
     }
     public static String[] getO2Pattern(){
         return new String[]{
-            "  ***   ",
-            "**    **",
-            "**    **",
-            "**    **",
-            "**    **",
-            "**    **",
-            "  ***   ",
+            "   ***   ",
+            "**     **",
+            "**     **",
+            "**     **",
+            "**     **",
+            "**     **",
+            "   ***   ",
         };
     }
     public static String[] getPPattern(){
@@ -36,7 +36,7 @@ public class OOPSBannerApp {
             "**      ",
         };
     }  
-    public static String getS(int row) {
+    public static String getSPattern(int row) {
         String[] s = {
             "  ***** ", 
             " ** ", 
@@ -46,7 +46,6 @@ public class OOPSBannerApp {
             "      ** ", 
             "  ***** "
         };
-        return s[row];
     }
     public static void main(String[] args) {
         String[] oPattern = getOPattern();

@@ -21,7 +21,7 @@ public class OOPSBannerApp {
             "**    **",
             "**    **",
             "**    **",
-            "**     **",
+            "**    **",
             "  ***   ",
         };
     }
@@ -38,13 +38,13 @@ public class OOPSBannerApp {
     }  
     public static String[] getSPattern(){
         return new String[]{
-            "   ***** ",
-            " **      ",
-            " **      ",
-            "   *****   ",
-            "        ** ",
-            " **     ** ",
-            "   *****   ",
+            "  ***** ",
+            "**      ",
+            "**      ",
+            "  *****   ",
+            "       ** ",
+            " **    ** ",
+            "  *****   ",
         };
     }
     public static void main(String[] args) {

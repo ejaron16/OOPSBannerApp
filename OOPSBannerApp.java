@@ -1,8 +1,8 @@
 /**
  * @author [E JARON]
- * @version 1.0 UC3 - OOPS Banner Using String Join
+ * @version 1.0 UC4-OOPS Banner Printing with Array & Loops
  */
-public class OOPSSTRJoin {
+public class OOPSBannerApp{
 
     public static void main(String[] args) {
         // Now we just call the method instead of writing all the print lines here
@@ -11,12 +11,17 @@ public class OOPSSTRJoin {
 
     // This is the new function (method) we created to hold the banner logic
     public static void displayOopsBanner() {
-        System.out.println(String.join(" ","  ***   ","  ***  ","******","   ***** "));
-        System.out.println(String.join(" ","**    **","**   **","*    *"," **      "));
-        System.out.println(String.join(" ","**    **","**   **","*    *"," **       "));
-        System.out.println(String.join(" ","**    **","**   **","****** ","  *****  "));
-        System.out.println(String.join(" ","**    **","**   **","**    ","        ** "));
-        System.out.println(String.join(" ","**    **","**   **","**    "," **     ** "));
-        System.out.println(String.join(" ","  ***   ","  ***  ","**    ","   ***** "));
-    }
+        String[] lines = new String[7];
+        lines[0] = String.join(" ","  ***   ","  ***  ","******","   ***** ");
+        lines[1] = String.join(" ","**    **","**   **","*    *"," **      ");
+        lines[2] = String.join(" ","**    **","**   **","*    *"," **      ");
+        lines[3] = String.join(" ","**    **","**   **","****** ","  *****  ");
+        lines[4] = String.join(" ","**    **","**   **","**    ","        ** ");
+        lines[5] = String.join(" ","**    **","**   **","**    "," **     ** ");
+        lines[6] = String.join(" ","  ***   ","  ***  ","**    ","   *****      ");
+
+   for (String line : lines) {
+    System.out.println(line);
+   }
+}
 }

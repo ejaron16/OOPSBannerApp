@@ -1,17 +1,15 @@
 /**
  * @author [E JARON]
- * @version 1.0 UC6-Refactor Banner Logic into Functions
+ * @version 6.0 UC6-Perfectly Aligned Modular Methods
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        // This is the starting point. It just calls the "printer" below.
         displayOopsBanner();
     }
 
     public static void displayOopsBanner() {
-        // We make a list (array) of 7 lines to form the banner.
-        // Instead of typing stars here, we ask our "helper methods" for the shapes.
+        // String.join connects the 4 letter blocks with 1 space between them
         String[] lines = {
             String.join(" ", getO(0), getO(0), getP(0), getS(0)),
             String.join(" ", getO(1), getO(1), getP(1), getS(1)),
@@ -22,29 +20,25 @@ public class OOPSBannerApp {
             String.join(" ", getO(6), getO(6), getP(6), getS(6))
         };
 
-        // This "for" loop goes through the list and prints each line one by one.
         for (String row : lines) {
             System.out.println(row);
         }
     }
 
-    // --- HELPER METHODS (The "Shape Makers") ---
-
-    // This method knows what the letter 'O' looks like.
-    public static String getO(int lineNum) {
-        String[] oPattern = {"  *** ", " ** ** ", "** **", "** **", "** **", " ** ** ", "  *** "};
-        return oPattern[lineNum];
+    // Every string below is EXACTLY 7 characters long to ensure alignment
+    
+    public static String getO(int row) {
+        String[] o = {"  *** ", " ** ** ", "** **", "** **", "** **", " ** ** ", "  *** "};
+        return o[row];
     }
 
-    // This method knows what the letter 'P' looks like.
-    public static String getP(int lineNum) {
-        String[] pPattern = {"****** ", "** **", "** **", "****** ", "** ", "** ", "** "};
-        return pPattern[lineNum];
+    public static String getP(int row) {
+        String[] p = {"****** ", "** **", "** **", "****** ", "** ", "** ", "** "};
+        return p[row];
     }
 
-    // This method knows what the letter 'S' looks like.
-    public static String getS(int lineNum) {
-        String[] sPattern = {" ***** ", "** ", "** ", "  *** ", "    ** ", "    ** ", " ***** "};
-        return sPattern[lineNum];
+    public static String getS(int row) {
+        String[] s = {" ***** ", "** ", "** ", " ***** ", "     **", "     **", " ***** "};
+        return s[row];
     }
 }

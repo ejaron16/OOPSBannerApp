@@ -1,52 +1,86 @@
 /**
  * @author [E JARON]
- * @version 1.0
+ * @version 1.0 UC7-Inner Classs
  */
 public class OOPSBannerApp {
-    public static String[] getOPattern(){
-        return new String[]{
-            "   ***   ",
-            "**     **",
-            "**     **",
-            "**     **",
-            "   ***   ",
-        };
-    }
-    public static String[] getO2Pattern(){
-        return new String[]{
-            "   ***   ",
-            "**     **",
-            "**     **",
-            "**     **",
-            "   ***   ",
-        };
-    }
-    public static String[] getPPattern(){
-        return new String[]{
-            "******",
-            "**    *",
-            "*     * ",
-            "****** ",
-            "**      ",
-            "**      ",
-        };
-    }  
-    public static String[] getSPattern(){
-        return new String[]{
-            "   ***** ",
-            " **      ",
-            "  *****   ",
-            "       ** ",
-            "  *****   ",
-        };
-    }
-    public static void main(String[] args) {
-        String[] oPattern = getOPattern();
-        String[] o2Pattern = getO2Pattern();
-        String[] pPattern = getPPattern();
-        String[] sPattern = getSPattern();
-        for (int i = 0; i < oPattern.length; i++) {
-            System.out.println(oPattern[i] + " " + o2Pattern[i] + " " +  pPattern[i] + " " + sPattern[i]);
+
+    static class CharacterPatternMap {
+        Character character;
+        String[] pattern;
+
+        public CharacterPatternMap(Character character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
         }
-   };
+
+        public static String[] getCharacterPattern(char ch, CharacterPatternMap[] charMaps) {
+            for (CharacterPatternMap charMap : charMaps) {
+                if (charMap.character == ch) {
+                    return charMap.pattern;
+                }
+            }
+            return null;
+        }
+
+        public static void printMessage(String message, CharacterPatternMap[] charMaps) {
+            StringBuilder[] output = new StringBuilder[5];
+
+            for (int i = 0; i < 5; i++) {
+                output[i] = new StringBuilder();
+            }
+
+            for (char ch : message.toCharArray()) {
+                String[] pattern = getCharacterPattern(ch, charMaps);
+
+                if (pattern != null) {
+                    for (int i = 0; i < 5; i++) {
+                        output[i].append(pattern[i]).append("   "); // equal spacing
+                    }
+                }
+            }
+
+            for (StringBuilder line : output) {
+                System.out.println(line);
+            }
+        }
+
+        public static CharacterPatternMap[] createCharacterPatternMaps() {
+            return new CharacterPatternMap[] {
+
+                // Each letter width = 10 characters
+
+                new CharacterPatternMap('O', new String[] {
+                    "  ******  ",
+                    " **    ** ",
+                    " **    ** ",
+                    " **    ** ",
+                    "  ******  "
+                }),
+
+                new CharacterPatternMap('P', new String[] {
+                    " ******   ",
+                    " **    ** ",
+                    " ******   ",
+                    " **        ",
+                    " **        "
+                }),
+
+                new CharacterPatternMap('S', new String[] {
+                    "  ******  ",
+                    " **        ",
+                    "  ******  ",
+                    "      **  ",
+                    " ******   "
+                })
+            };
+        }
+    }
+
+    public static void main(String[] args) {
+        CharacterPatternMap[] charmaps =
+                CharacterPatternMap.createCharacterPatternMaps();
+
+        String message = "OOPS";
+        CharacterPatternMap.printMessage(message, charmaps);
+    }
 }
